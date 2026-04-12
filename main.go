@@ -30,7 +30,14 @@ func main(){
 	var result []string
 
 	for i := 0; i < len(words); i++ {
-		if words[i] == "(hex)" && 
+		if words[i] == "(hex)" && i < 0 {
+
+			decimal, err := strconv.ParseInt(words[i-1], 16, 64)
+
+			if err != nil {
+				result
+			}
+		}
 	}
 
 
