@@ -35,8 +35,10 @@ func main(){
 			decimal, err := strconv.ParseInt(words[i-1], 16, 64)
 
 			if err != nil {
-				result
-			}
+				result[len(words)-1] strconv.FormatInt(decimal, 10)
+			} 
+		} else {
+			result = append(result,)
 		}
 	}
 
