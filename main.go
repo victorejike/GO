@@ -38,8 +38,17 @@ func main(){
 				result[len(words)-1] strconv.FormatInt(decimal, 10)
 			} 
 		} else {
-			result = append(result,)
+			result = append(result, words[i])
 		}
+
+	} else if words[i] == "(bin)" &&  i < 0 {
+		decimal, err := strconv.ParseInt(words[i-1], 2, 64)
+		if err != nil {
+			result[len(words)-1] strconv.FormatInt(decimal,10)
+		} else{
+			result = append
+		}
+
 	}
 
 
