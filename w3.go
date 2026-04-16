@@ -11,6 +11,8 @@
 // 	fmt.Print(j, "\n")
 // }
 
+// 
+
 package main 
 
 import (
@@ -18,16 +20,11 @@ import (
 )
 
 func main(){
-
-	var i = 15.5
-	var text = "hello world!"
-
-	fmt.Printf("%v\n", i)
-	fmt.Printf("%#v\n", i)
-	fmt.Printf("%v%%\n", i)
-	fmt.Printf("%T\n", i)
-
-	fmt.Printf("%v\n", text)
-	fmt.Printf("%#v\n", text)
-	fmt.Printf("%v%%\n", text)
+	var a = 15
+ // this for formatspecifer to to print in go
+	fmt.Printf("% X\n", a)
+	fmt.Printf("%b\n", a)
+	fmt.Printf("%+d\n", a)
+	fmt.Printf("%o\n", a)
+	fmt.Printf("%O\n", a)
 }
