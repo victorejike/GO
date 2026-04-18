@@ -61,7 +61,7 @@ import (
 	"fmt"
 	"os"
  	"strings"
-	"strconv" 
+	// "strconv" 
 )
 
 func main(){
@@ -80,7 +80,7 @@ func main(){
 	}
 
 	text := string(data)
-	text = transforma(text)
+	text = capitalized(text)
 
 	err = os.WriteFile(outputFile,[]byte(data), 0644)
 	if err != nil {
@@ -91,7 +91,11 @@ func main(){
 }
 
 func capitalized(text string)string{
-	result := strings.ToUpper(text[0:1]) + strings.ToLower(text[1:0])
+	result := strings.ToUpper(text[0:1]) + strings.ToLower(text[1:])
 	return result
 }
+
+// func transforma(text string)string{
+
+// }
 
