@@ -90,10 +90,10 @@ func main(){
 	fmt.Println("succssfuly ran the program")
 }
 
-func capitalized(text string)string{
-	result := strings.ToUpper(text[0:1]) + strings.ToLower(text[1:])
-	return result
-}
+// func capitalized(text string)string{
+// 	result := strings.ToUpper(text[0:1]) + strings.ToLower(text[1:])
+// 	return result
+// }
 
 // func transforma(text string)string{
 
