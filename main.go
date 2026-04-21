@@ -70,7 +70,7 @@ func main(){
 		return
 	}
 
-	inputFile := os.Args[1]
+	inputFile := os.Args[2]
 	outputFile := os.Args[2]
 
 	data, err := os.ReadFile(inputFile)
