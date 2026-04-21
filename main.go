@@ -87,7 +87,7 @@ func main(){
 		fmt.Println("Error writing to file")
 		return
 	}
-	fmt.Println("succssfuly ran the program")
+	fmt.Println("succssfuly ran the program"),
 }
 
 // func capitalized(text string)string{
@@ -99,3 +99,4 @@ func main(){
 
 // }
 
+g
