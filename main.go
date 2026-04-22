@@ -1,4 +1,4 @@
-// package main 
+// package main
 
 // import (
 // 	"fmt"
@@ -13,7 +13,7 @@
 // 		fmt.Println("usage : go run main.go <inputfile.txt> < outputfile.txt>")
 // 		return
 // 	}
-//      // thia where i have decelerded the input 
+//      // thia where i have decelerded the input
 // 	inputFile := os.Args[1]
 // 	outputFile := os.Args[2]
 
@@ -36,7 +36,7 @@
 
 // 			if err != nil {
 // 				result[len(words)-1] strconv.FormatInt(decimal, 10)
-// 			} 
+// 			}
 // 		} else {
 // 			result = append(result, words[i])
 // 		}
@@ -51,20 +51,18 @@
 
 // 	}
 
-
-
 // }
 
-package main 
+package main
 
 import (
 	"fmt"
 	"os"
- 	"strings"
-	// "strconv" 
+	"strings"
+	// "strconv"
 )
 
-func main(){
+func main() {
 	if len(os.Args) != 3 {
 		fmt.Println("usage : go run main.go <inputfile> <outputfile>")
 		return
@@ -82,21 +80,35 @@ func main(){
 	text := string(data)
 	text = capitalized(text)
 
-	err = os.WriteFile(outputFile,[]byte(data), 0644)
+	err = os.WriteFile(outputFile, []byte(data), 0644)
 	if err != nil {
 		fmt.Println("Error writing to file")
 		return
 	}
-	fmt.Println("succssfuly ran the program"),
+	fmt.Println("succssfuly ran the program ")
 }
 
-// func capitalized(text string)string{
-// 	result := strings.ToUpper(text[0:1]) + strings.ToLower(text[1:])
-// 	return result
-// }
+func capitalized(text string) string {
+	result := strings.ToUpper(text[0:1]) + strings.ToLower(text[1:])
+	return result
+}
 
-// func transforma(text string)string{
+func transforma(text string) string {
+	token := strings.Fields(text)
+	var result []string
 
-// }
+	for i := 0; i < len(token); i++ {
+		token := token[i]
 
-g
+		if token == "cap" && len(result) > 0 {
+			result[len(result)-1] = capitalized(result[len(result)-1])
+			continue
+		}
+
+		if token == "(up)" && len(result) > 0 {
+			result[len(result)-1] = strings.ToUpper(result[len(result)-1])
+		}
+
+	}
+
+}
